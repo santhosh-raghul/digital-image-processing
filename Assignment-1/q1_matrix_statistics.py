@@ -56,7 +56,7 @@ def mode(mat):
 
 def standard_deviation(mat):
 	mat_with_sq_entires=[[elem**2 for elem in row] for row in mat]
-	return mean(mat_with_sq_entires)-mean(mat)**2
+	return (mean(mat_with_sq_entires)-mean(mat)**2)**0.5
 
 def print_matrix(mat):
 	x=len(str(maximum(mat)))
