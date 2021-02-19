@@ -1,7 +1,7 @@
 # Question 1 and 2
 
 
-```
+```python
 def read_matrix(filename):
 	f=open(filename,'r')
 	m=int(f.readline().split()[0])
@@ -200,7 +200,7 @@ q1('d')
 
 
 
-```
+```python
 from random import randrange
 
 r=int(input("enter number of rows: "))
@@ -244,7 +244,7 @@ print_all_statistics(mat)
 ## Download and load the image.
 
 
-```
+```python
 !wget https://upload.wikimedia.org/wikipedia/en/7/7d/Lenna_%28test_image%29.png -O Lenna.png
 from google.colab.patches import cv2_imshow
 import cv2
@@ -270,7 +270,7 @@ cv2_imshow(img_gray)
 
 
     
-![png](md_images/output_5_1.png)
+![png](output_5_1.png)
     
 
 
@@ -280,7 +280,7 @@ cv2_imshow(img_gray)
 `q3`: Computes the average of the returned samples from `gen_samples` in the way specified by the question.
 
 
-```
+```python
 from skimage.util import random_noise
 import numpy as np
 import matplotlib.pyplot as plt
@@ -340,24 +340,42 @@ def q3(img, mode):
 **Explanation**: A possible reason for this could be that, the noises may not occur on the same pixels for the samples generated. Hence, while averaging, the correct values overpower the value of noise.
 
 
-```
+```python
 q3(img_gray, "s&p")
 ```
 
 
-```
+    
+![png](output_9_0.png)
+    
+
+
+
+```python
 q3(img_gray, "gaussian")
 ```
 
 
-```
+    
+![png](output_10_0.png)
+    
+
+
+
+```python
 q3(img_gray, "speckle")
 ```
+
+
+    
+![png](output_11_0.png)
+    
+
 
 # Question 4
 
 
-```
+```python
 !wget https://upload.wikimedia.org/wikipedia/en/7/7d/Lenna_%28test_image%29.png -O Lenna.png
 from google.colab.patches import cv2_imshow
 import cv2
@@ -383,12 +401,12 @@ cv2_imshow(img)
 
 
     
-![png](md_images/output_13_1.png)
+![png](output_13_1.png)
     
 
 
 
-```
+```python
 def bilinear_scaling(img,scale):
   scaled=np.zeros((int((img.shape[0]-1)*scale+1),int((img.shape[1]-1)*scale+1),3))
   for i in range(scaled.shape[0]):
@@ -415,7 +433,7 @@ def bilinear_scaling(img,scale):
 ```
 
 
-```
+```python
 fig,(user_defined,inbuilt,difference)=plt.subplots(nrows=1,ncols=3,figsize=(30,10))
 fig.suptitle("scale factor = 0.5",fontsize=50)
 user_defined.axis('off')
@@ -441,7 +459,7 @@ print("mean error (difference between the user defined and inbuilt function) = %
 
 
     
-![png](md_images/output_15_0.png)
+![png](output_15_0.png)
     
 
 
@@ -449,7 +467,7 @@ print("mean error (difference between the user defined and inbuilt function) = %
 
 
 
-```
+```python
 fig,(user_defined,inbuilt,difference)=plt.subplots(nrows=1,ncols=3,figsize=(30,10))
 fig.suptitle("scale factor = 1",fontsize=50)
 user_defined.axis('off')
@@ -475,7 +493,7 @@ print("mean error (difference between the user defined and inbuilt function) = %
 
 
     
-![png](md_images/output_16_0.png)
+![png](output_16_0.png)
     
 
 
@@ -483,7 +501,7 @@ print("mean error (difference between the user defined and inbuilt function) = %
 
 
 
-```
+```python
 fig,(user_defined,inbuilt,difference)=plt.subplots(nrows=1,ncols=3,figsize=(30,10))
 fig.suptitle("scale factor = 2",fontsize=50)
 user_defined.axis('off')
@@ -510,7 +528,7 @@ print("mean error (difference between the user defined and inbuilt function) = %
 
 
     
-![png](md_images/output_17_0.png)
+![png](output_17_0.png)
     
 
 
@@ -520,7 +538,7 @@ print("mean error (difference between the user defined and inbuilt function) = %
 # Question 5
 
 
-```
+```python
 !wget https://www.towerofpisa.org/wp-content/uploads/2015/04/pisa-leaning-tower1.jpg -O pisa.png
 from google.colab.patches import cv2_imshow
 import cv2
@@ -547,12 +565,12 @@ cv2_imshow(img_gray)
 
 
     
-![png](md_images/output_19_1.png)
+![png](output_19_1.png)
     
 
 
 
-```
+```python
 import math
 import numpy as np
 import matplotlib.pyplot as plt
@@ -617,7 +635,7 @@ def direct_mapping(orig_coords, angle):
 ```
 
 
-```
+```python
 %matplotlib inline
 import time
 
@@ -643,7 +661,7 @@ while True:
 
 
     
-![png](md_images/output_21_1.png)
+![png](output_21_1.png)
     
 
 
@@ -652,7 +670,7 @@ while True:
 
 
     
-![png](md_images/output_21_3.png)
+![png](output_21_3.png)
     
 
 
@@ -661,7 +679,7 @@ while True:
 
 
     
-![png](md_images/output_21_5.png)
+![png](output_21_5.png)
     
 
 
@@ -670,7 +688,7 @@ while True:
 
 
     
-![png](md_images/output_21_7.png)
+![png](output_21_7.png)
     
 
 
@@ -681,7 +699,7 @@ while True:
 # Question 6 and 7
 
 
-```
+```python
 import cv2, numpy as np
 from skimage import exposure
 from matplotlib import pyplot as plt
@@ -785,6 +803,6 @@ plt.show()
 
 
     
-![png](md_images/output_23_0.png)
+![png](output_23_0.png)
     
 
