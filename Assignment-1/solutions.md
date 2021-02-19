@@ -270,7 +270,7 @@ cv2_imshow(img_gray)
 
 
     
-![png](output_5_1.png)
+![png](md_images/output_5_1.png)
     
 
 
@@ -346,7 +346,7 @@ q3(img_gray, "s&p")
 
 
     
-![png](output_9_0.png)
+![png](md_images/output_9_0.png)
     
 
 
@@ -357,7 +357,7 @@ q3(img_gray, "gaussian")
 
 
     
-![png](output_10_0.png)
+![png](md_images/output_10_0.png)
     
 
 
@@ -368,7 +368,7 @@ q3(img_gray, "speckle")
 
 
     
-![png](output_11_0.png)
+![png](md_images/output_11_0.png)
     
 
 
@@ -401,7 +401,7 @@ cv2_imshow(img)
 
 
     
-![png](output_13_1.png)
+![png](md_images/output_13_1.png)
     
 
 
@@ -459,7 +459,7 @@ print("mean error (difference between the user defined and inbuilt function) = %
 
 
     
-![png](output_15_0.png)
+![png](md_images/output_15_0.png)
     
 
 
@@ -493,7 +493,7 @@ print("mean error (difference between the user defined and inbuilt function) = %
 
 
     
-![png](output_16_0.png)
+![png](md_images/output_16_0.png)
     
 
 
@@ -528,7 +528,7 @@ print("mean error (difference between the user defined and inbuilt function) = %
 
 
     
-![png](output_17_0.png)
+![png](md_images/output_17_0.png)
     
 
 
@@ -565,7 +565,7 @@ cv2_imshow(img_gray)
 
 
     
-![png](output_19_1.png)
+![png](md_images/output_19_1.png)
     
 
 
@@ -661,7 +661,7 @@ while True:
 
 
     
-![png](output_21_1.png)
+![png](md_images/output_21_1.png)
     
 
 
@@ -670,7 +670,7 @@ while True:
 
 
     
-![png](output_21_3.png)
+![png](md_images/output_21_3.png)
     
 
 
@@ -679,7 +679,7 @@ while True:
 
 
     
-![png](output_21_5.png)
+![png](md_images/output_21_5.png)
     
 
 
@@ -688,7 +688,7 @@ while True:
 
 
     
-![png](output_21_7.png)
+![png](md_images/output_21_7.png)
     
 
 
@@ -803,6 +803,6 @@ plt.show()
 
 
     
-![png](output_23_0.png)
+![png](md_images/output_23_0.png)
     
 
