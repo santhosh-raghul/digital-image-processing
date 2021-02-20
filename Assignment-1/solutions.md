@@ -383,19 +383,21 @@ import numpy as np
 from matplotlib import pyplot as plt
  
 img = cv2.imread("Lenna.png")
-cv2_imshow(img)
+# cv2_imshow(img)
+plt.imshow(cv2.cvtColor(img,cv2.COLOR_BGR2RGB))
+plt.show()
 ```
 
-    --2021-02-19 15:30:28--  https://upload.wikimedia.org/wikipedia/en/7/7d/Lenna_%28test_image%29.png
-    Resolving upload.wikimedia.org (upload.wikimedia.org)... 208.80.154.240, 2620:0:861:ed1a::2:b
-    Connecting to upload.wikimedia.org (upload.wikimedia.org)|208.80.154.240|:443... connected.
+    --2021-02-20 18:50:29--  https://upload.wikimedia.org/wikipedia/en/7/7d/Lenna_%28test_image%29.png
+    Resolving upload.wikimedia.org (upload.wikimedia.org)... 103.102.166.240, 2001:df2:e500:ed1a::2:b
+    Connecting to upload.wikimedia.org (upload.wikimedia.org)|103.102.166.240|:443... connected.
     HTTP request sent, awaiting response... 200 OK
     Length: 473831 (463K) [image/png]
     Saving to: ‘Lenna.png’
     
-    Lenna.png           100%[===================>] 462.73K  --.-KB/s    in 0.06s   
+    Lenna.png           100%[===================>] 462.73K  1.89MB/s    in 0.2s    
     
-    2021-02-19 15:30:28 (7.43 MB/s) - ‘Lenna.png’ saved [473831/473831]
+    2021-02-20 18:50:30 (1.89 MB/s) - ‘Lenna.png’ saved [473831/473831]
     
 
 
@@ -419,10 +421,6 @@ def bilinear_scaling(img,scale):
       elif a!=x0 and b==y0:
         scaled[i][j] = np.round ( img[x0][y0]*(x0+1-a) + img[x0+1][y0]*(a-x0) )
       elif a==x0 and b!=y0:
-        a = i/scale
-        b = j/scale
-        x = int (a)
-        y = int (b)
         scaled[i][j] = np.round ( img[x0][y0]*(y+1-b) + img[x0][y0+1]*(b-y0) )
       else:
         scaled[i][j] = np.round ( img[x0][y0]*(x1-a)*(y1-b) + img[x0][y1]*(x1-a)*(b-y0) + img[x1][y0]*(a-x0)*(y1-b) + img[x1][y1]*(a-x0)*(b-y0) )
@@ -436,9 +434,6 @@ def bilinear_scaling(img,scale):
 ```python
 fig,(user_defined,inbuilt,difference)=plt.subplots(nrows=1,ncols=3,figsize=(30,10))
 fig.suptitle("scale factor = 0.5",fontsize=50)
-user_defined.axis('off')
-inbuilt.axis('off')
-difference.axis('off')
 user_defined.set_title('user defined',fontsize=30)
 inbuilt.set_title('inbuilt',fontsize=30)
 difference.set_title('difference',fontsize=30)
@@ -470,9 +465,6 @@ print("mean error (difference between the user defined and inbuilt function) = %
 ```python
 fig,(user_defined,inbuilt,difference)=plt.subplots(nrows=1,ncols=3,figsize=(30,10))
 fig.suptitle("scale factor = 1",fontsize=50)
-user_defined.axis('off')
-inbuilt.axis('off')
-difference.axis('off')
 user_defined.set_title('user defined',fontsize=30)
 inbuilt.set_title('inbuilt',fontsize=30)
 difference.set_title('difference',fontsize=30)
@@ -504,9 +496,6 @@ print("mean error (difference between the user defined and inbuilt function) = %
 ```python
 fig,(user_defined,inbuilt,difference)=plt.subplots(nrows=1,ncols=3,figsize=(30,10))
 fig.suptitle("scale factor = 2",fontsize=50)
-user_defined.axis('off')
-inbuilt.axis('off')
-difference.axis('off')
 user_defined.set_title('user defined',fontsize=30)
 inbuilt.set_title('inbuilt',fontsize=30)
 difference.set_title('difference',fontsize=30)
