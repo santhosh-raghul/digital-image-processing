@@ -1,9 +1,9 @@
 # Digital Image Processing
-Assignments done in the Digital Image Processing course in IIITDM Kancheepuram, Jan to May 2021 semester
+Assignments done for the Digital Image Processing course in IIITDM Kancheepuram, January to May 2021 semester
 
 ## Assignment 1
-* sum, max, mean, mode, std, freq of a matrix
-* image with noise and effects of aaverage filter on such images
+* sum, max, mean, mode, std, frequency of a matrix
+* image with noise and effects of average filter on such images
 * scaling of image using bilinear interpolation
 * image rotation with bilinear interpolation
 * histogram equalization
